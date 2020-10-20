@@ -27,5 +27,6 @@ class CLI
     Movie.all.each do |movie|
       puts movie.title
   end
+end
 
 end
