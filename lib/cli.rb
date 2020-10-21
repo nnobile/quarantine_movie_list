@@ -1,7 +1,7 @@
 class CLI
 
   def start
-    puts "Welcome!"
+    puts "Welcome to the Quarantine Movie List Generator!"
     API.retrieve_movies
     self.list
   end
@@ -17,6 +17,7 @@ class CLI
       puts "Great!"
       # display the list
       display_list_of_movies
+      puts "Are you interested in learning more about this list? If so, enter the number associated with the movie."
     end
 
   end
