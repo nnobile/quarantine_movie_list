@@ -8,14 +8,14 @@ class API
     response = Net::HTTP.get(uri)
     movie_hash = JSON.parse(response)
 
-    # array_of_movies = hash["movies"]
-    #
-    # array_of_movies.each do |movies_hash|
+    array_of_movies = hash["movies"]
+    array_of_movies.each do |movies_hash|
+
     #   movie = Movie.new
     #   movie.title = movie_hash["title"]
     #   movie.overview = movie_hash["overview"]
     #   movie.release_date = movie_hash["release_date"]
-
+    binding.pry
     movie = Movie.new
     movie.title = movie_hash["title"]
     movie.vote_average = movie_hash["vote_average"]
@@ -26,3 +26,4 @@ class API
 
     end
   end
+end
