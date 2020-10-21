@@ -17,7 +17,7 @@ class CLI
       puts "Great!"
       # display the list
       display_list_of_movies
-      puts "Are you interested in learning more about this list? If so, enter the number associated with the movie."
+      puts "Are you interested in learning more? If so, enter the number next to the movie."
     end
 
   end
