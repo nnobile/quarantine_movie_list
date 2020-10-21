@@ -18,6 +18,7 @@ class API
 
     movie = Movie.new
     movie.title = movie_hash["title"]
+    movie.vote_average = movie_hash["vote_average"]
     movie.overview = movie_hash["overview"]
     movie.release_date = movie_hash["release_date"]
 
