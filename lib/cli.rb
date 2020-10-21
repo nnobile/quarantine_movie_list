@@ -7,20 +7,25 @@ class CLI
   end
 
   def list
-    # give user the option to see list of movies
+    sleep 1.5
     puts "Would you like to see a list of movies?"
+    sleep 1.5
     puts "Type 'yes' to continue or any other key to exit"
     user_input = gets.strip.downcase
-
-    # if the user says yes
+    sleep 1.5
     if user_input == "yes" || user_input == "y"
-      puts "Great!"
-      # display the list
+      puts "Great! Check 'em out:"
       display_list_of_movies
-      puts "Are you interested in learning more? If so, enter the number next to the movie."
-    end
+      puts "Interested in learning more? Enter the number next to the movie you want to learn more about."
 
+
+    else puts "Good! Go outside!"
+    end
   end
+
+    # if user_input == "yes" || user_input == "y"
+      # puts "Are you interested in learning more? If so, enter the number next to the movie."
+
 
   def display_list_of_movies
     # access all of the movies
