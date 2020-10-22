@@ -44,28 +44,24 @@ class CLI
   end
 
   def ask_user_for_movie_choice
-    puts "If there's a movie you'd like to learn more about, enter the associated number. Otherwise, enter 'no' to exit.".green
+    puts "If there's a movie you'd like to learn more about, enter the associated number.".green
     index = gets.strip.to_i - 1
+
 
     until index.between?(0, Movie.all.length - 1)
       puts "Sorry, invalid entry. Please choose a number between 1 and 20.".red
       index = gets.strip.to_i - 1
 
-      # if user_input == "no" || user_input == "n" || user_input == "exit"
-      # puts "Good! Go outside!"
     end
-  end
-
     movie_instance = Movie.all[index]
     display_movie_details(movie_instance)
-
   end
 
   def display_movie_details(movie)
     sleep(1.5)
     puts "\n"
     puts movie.title
-    puts "Vote Average: " + movie.vote_average
+    puts "Vote Average: #{movie.vote_average}"
     puts "Overview: " + movie.overview
     puts "Release Date: " + movie.release_date
   end
