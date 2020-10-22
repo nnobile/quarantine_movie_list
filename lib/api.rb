@@ -11,15 +11,11 @@ class API
     array_of_movies = films_hash["results"]
 
     array_of_movies.each do |movie_hash|
-
       movie = Movie.new
       movie.title = movie_hash["title"]
       movie.vote_average = movie_hash["vote_average"]
       movie.overview = movie_hash["overview"]
       movie.release_date = movie_hash["release_date"]
-
-
-
     end
   end
 end

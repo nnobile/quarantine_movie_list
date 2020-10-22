@@ -3,21 +3,21 @@ require 'pry'
 class CLI
 
   def start
-    puts "Welcome to the Quarantine Movie List Generator!".blue
+    puts "Welcome to the Quarantine Movie List Generator!".cyan.underline
     API.retrieve_movies
     self.list
   end
 
   def list
-    sleep(1.5)
-    puts "Would you like to see a list of movies?".blue
+    sleep(1)
+    puts "Would you like to see a list of movies?".cyan
 
-    sleep(1.5)
-    puts "Type 'yes' to continue or any other key to exit.".blue
+    sleep(1)
+    puts "Type 'yes' to continue or any other key to exit.".cyan
 
     user_input = gets.strip.downcase
 
-    sleep(1.5)
+    sleep(1)
     if user_input == "yes" || user_input == "y"
 
       puts "Great! Check 'em out:".green
@@ -29,6 +29,9 @@ class CLI
       puts "\n"
 
       list
+    else
+      puts "Good! Go outside!"
+
     end
   end
 
@@ -44,12 +47,11 @@ class CLI
     index = gets.strip.to_i - 1
 
     until index.between?(0, Movie.all.length - 1)
-      puts "Sorry, that's an invalid entry. Please try again."
+      puts "Sorry, invalid entry. Please choose a number between 1 and 20."
       index = gets.strip.to_i - 1
     end
 
     movie_instance = Movie.all[index]
-
     display_movie_details(movie_instance)
 
   end
