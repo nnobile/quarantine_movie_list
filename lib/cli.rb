@@ -47,7 +47,6 @@ class CLI
     puts "If there's a movie you'd like to learn more about, enter the associated number.".green
     index = gets.strip.to_i - 1
 
-
     until index.between?(0, Movie.all.length - 1)
       puts "Sorry, invalid entry. Please choose a number between 1 and 20.".red
       index = gets.strip.to_i - 1
@@ -62,8 +61,8 @@ class CLI
     puts "\n"
     puts movie.title
     puts "Vote Average: #{movie.vote_average}"
-    puts "Overview: " + movie.overview
-    puts "Release Date: " + movie.release_date
+    puts "Overview: #{movie.overview}"
+    puts "Release Date: #{movie.release_date}"
   end
 
 end
