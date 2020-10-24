@@ -13,7 +13,7 @@ class CLI
     puts "Would you like to see a list of movies?".cyan
 
     sleep(1)
-    puts "Type 'yes' to continue or any other key to exit.".cyan
+    puts "Type 'yes' or 'y' to continue. Or, enter any other key to exit.".cyan
 
     user_input = gets.strip.downcase
 
