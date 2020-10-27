@@ -59,7 +59,7 @@ class CLI
   def display_movie_details(movie)
     sleep(1.5)
     puts "\n"
-    puts movie.title
+    puts "Movie Title: #{movie.title}"
     puts "Vote Average: #{movie.vote_average}"
     puts "Overview: #{movie.overview}"
     puts "Release Date: #{movie.release_date}"
