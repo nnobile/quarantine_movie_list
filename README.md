@@ -25,6 +25,9 @@ Not currently taking any requests for contributions. Reviewing all requests peri
 The Movie Database (TMDb) is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDb's strong international focus and breadth of data is largely unmatched and something we're incredibly proud of. Put simply, we live and breathe community and that's precisely what makes us different.
 
 - This program uses the 'Colorize' gem, authored by Fazibear (https://github.com/fazibear/colorize).
+- This program uses the 'Pry' gem, authored by Banister (https://github.com/pry/pry)
+- This program uses the 'Dotenv' gem, authored by bkeepers (https://github.com/bkeepers/dotenv)
+
 
 # License
 - This project is licensed under the MIT license, linked here: https://opensource.org/licenses/MIT
